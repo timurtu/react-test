@@ -110,7 +110,7 @@ app.use((req, res) => {
 });
 
 if (config.port) {
-  server.listen(config.port, (err) => {
+  server.listen(process.env.PORT || 8000, (err) => {
     if (err) {
       console.error(err);
     }
