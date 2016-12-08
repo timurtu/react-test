@@ -1,19 +1,13 @@
 {
-  "name": "react-redux-universal-hot-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux and hot reloading",
-  "repository": "https://github.com/erikras/react-redux-universal-hot-example",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "name": "disorat.com",
+  "description": "Vote on anything",
+  "repository": "https://git.heroku.com/disorat.git",
+  "logo": "https://cdn3.iconfinder.com/data/icons/shopping-solid-icons-vol-3/64/125-512.png",
   "keywords": [
-    "react",
-    "isomorphic",
-    "universal",
-    "webpack",
-    "express",
-    "hot reloading",
-    "react-hot-reloader",
-    "redux",
-    "starter",
-    "boilerplate",
-    "babel"
-  ]
+    "vote",
+    "on",
+    "anything",
+    "anonymously"
+  ],
+  "image": "heroku/nodejs"
 }
