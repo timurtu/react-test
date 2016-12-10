@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/posts', { method: 'POST' })
+    fetch('http://disorat.com/posts', { method: 'POST' })
       .then(res => res.json())
       .then(posts => this.setState({ posts }))
       .catch(console.error)
