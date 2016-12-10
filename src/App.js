@@ -5,6 +5,6 @@ import Navbar from './containers/Navbar'
 export default () =>
   <div>
     <Navbar/>
-    <div style={{marginTop: '45px'}}></div>
+    <div style={{ marginTop: '75px' }}></div>
     <Feed/>
   </div>
