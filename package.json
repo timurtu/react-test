@@ -7,6 +7,8 @@
     "eslint-plugin-react": "^6.8.0"
   },
   "dependencies": {
+    "bluebird": "^3.4.6",
+    "github": "^7.0.1",
     "npm-run-all": "^3.1.2",
     "pushstate-server": "^2.1.0",
     "react": "^15.4.1",
