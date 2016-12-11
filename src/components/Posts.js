@@ -30,7 +30,6 @@ export default class extends React.Component {
                 </a>
               </div>
               <div className="panel-body">
-                <img src="..." alt={p.title}/>
                 <p style={{
                   display: 'table',
                   margin: '0 auto'

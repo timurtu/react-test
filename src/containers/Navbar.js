@@ -14,7 +14,7 @@ export default () =>
   }} className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
-        <a className="navbar-brand" href="#">Disorat</a>
+        <a href="#" className="navbar-brand">Gwitter</a>
       </div>
 
       <div className="collapse navbar-collapse" id="collapse-bar">
@@ -35,15 +35,15 @@ export default () =>
             </ul>
           </li>
         </ul>
-        <form className="navbar-form navbar-left" role="search">
-          <div className="form-group">
-            <input type="text" className="form-control" placeholder="Search"/>
-          </div>
-          <button type="submit" className="btn btn-default">Submit</button>
-        </form>
-        <ul className="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-        </ul>
       </div>
     </div>
+
+    <a href="#">
+      <img style={{
+        width: '4.25em',
+        position: 'fixed',
+        right: '1em',
+        top: '0'
+      }} src="/res/gwitter-logo.png" alt="Gwitter logo"/>
+    </a>
   </nav>
