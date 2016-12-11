@@ -8,18 +8,20 @@ import React from 'react'
 export default ({ posts }) =>
   <div className="row">
     {posts.map(p =>
-      <div className="col-sm-6 col-md-4">
-        <div className="panel panel-primary">
+      <div key={p.id} className="col-sm-6">
+        <div style={{
+          margin: '1em'
+        }} className="panel panel-primary">
           <div className="panel-heading">
-            <h3 className="panel-title">
+            <a href="#" className="panel-title">
               {p.title}
-            </h3>
+            </a>
           </div>
           <div className="panel-body">
             <img src="..." alt={p.title}/>
             <p>{p.option1votes + p.option2votes} votes</p>
-            <button>{p.option1}</button>
-            <button>{p.option2}</button>
+            <button className="btn">{p.option1}</button>
+            <button className="btn pull-right">{p.option2}</button>
           </div>
         </div>
       </div>

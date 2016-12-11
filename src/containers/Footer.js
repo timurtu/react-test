@@ -5,15 +5,23 @@
 import React from 'react'
 
 export default () =>
-  <nav style={{
+  <footer style={{
     position: 'fixed',
     zIndex: 1,
-    top: 0,
+    bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
+    margin: 0
   }} className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
+        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#collapse-bar">
+          <span className="sr-only">Toggle navigation</span>
+          <span className="icon-bar"/>
+          <span className="icon-bar"/>
+          <span className="icon-bar"/>
+        </button>
         <a className="navbar-brand" href="#">Disorat</a>
       </div>
 
@@ -46,4 +54,5 @@ export default () =>
         </ul>
       </div>
     </div>
-  </nav>
+  </footer>
+
