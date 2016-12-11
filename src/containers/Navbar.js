@@ -14,6 +14,23 @@ export default () =>
   }} className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
+        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#collapse-bar">
+          <span className="sr-only">Toggle navigation</span>
+          <span className="icon-bar"/>
+          <span className="icon-bar"/>
+          <span className="icon-bar"/>
+        </button>
+
+        <a className="navbar-brand" href="#">
+          <img style={{
+            width: '2em',
+            position: 'fixed',
+            top: 0,
+            left: 0
+          }} alt="Brand" src="res/gwitter-logo-small.png"/>
+        </a>
+
         <a href="#" className="navbar-brand">Gwitter</a>
       </div>
 
@@ -23,7 +40,9 @@ export default () =>
           <li><a href="#">Link</a></li>
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-              <span className="caret"/></a>
+              <span className="caret"/>
+            </a>
+
             <ul className="dropdown-menu" role="menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -33,17 +52,22 @@ export default () =>
               <li className="divider"/>
               <li><a href="#">One more separated link</a></li>
             </ul>
+
           </li>
         </ul>
-      </div>
-    </div>
 
-    <a href="#">
-      <img style={{
-        width: '4.25em',
+        <form className="navbar-form">
+          <div className="form-group">
+            <input type="text" className="form-control" placeholder="Search"/>
+          </div>
+          <button type="submit" className="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+      <a href="#" style={{
         position: 'fixed',
-        right: '1em',
-        top: '0'
-      }} src="/res/gwitter-logo.png" alt="Gwitter logo"/>
-    </a>
+        right: '.5em',
+        top: '.5em'
+      }} className="btn btn-default">Log in with GitHub</a>
+    </div>
   </nav>
