@@ -19,7 +19,6 @@ export default class extends React.Component {
         this.setState({ user })
         return user
       })
-      .then(console.log)
   }
 
   render() {
