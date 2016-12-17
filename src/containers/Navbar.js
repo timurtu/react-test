@@ -4,6 +4,7 @@
 
 import React from 'react'
 import { Link } from 'react-router'
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 
 const $ = window.$
 
@@ -15,7 +16,6 @@ export default class extends React.Component {
   }
 
   componentDidMount() {
-
     this.setState({ loggedIn: true })
   }
 
@@ -64,8 +64,26 @@ export default class extends React.Component {
 
           <div className="collapse navbar-collapse" id="collapse-bar">
             <ul className="nav navbar-nav">
-              <li className="active"><Link to="/">Home <span className="sr-only">(current)</span></Link></li>
-              <li><Link to="/user">Profile</Link></li>
+              <IndexLinkContainer to={{
+                pathname: '/foo',
+                query: { bar: 'baz' },
+                hash: '#the-hash',
+              }}>
+                <li>
+                  <Link>All Commits <span className="sr-only">(current)</span></Link>
+                </li>
+              </IndexLinkContainer>
+
+              <LinkContainer to={{
+                pathname: '/foo',
+                query: { bar: 'baz' },
+                hash: '#the-hash',
+              }}>
+                <li>
+                  <Link>Profile</Link>
+                </li>
+              </LinkContainer>
+
               <li className="dropdown">
                 <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
                   <span className="caret"/>
