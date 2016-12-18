@@ -33,7 +33,7 @@ const Headline = ({ children }) =>
   <h2 className="visible-xs" style={{
     position: 'absolute',
     display: 'inline',
-    top: '7rem',
+    top: '6rem',
     margin: '1em'
   }}>
     {children}
@@ -56,7 +56,7 @@ const Subhead = ({ children, top, left }) =>
       position: 'absolute',
       display: 'inline',
       top,
-      left
+      left: '1em'
     }}>
       {children}
     </p>
