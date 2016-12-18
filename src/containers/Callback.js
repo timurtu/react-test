@@ -10,22 +10,21 @@ export default class extends React.Component {
 
   componentWillMount() {
 
-    const code = queryString.parse(location.search).code
+    const body = new FormData()
+    body.append('code', queryString.parse(location.search).code)
+    body.append('client_id', 'fcf6d95c161162a50048')
+    body.append('client_secret', 'c7a4911eb48b24fb92e183fdaad0f833421398da')
 
     fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: {
         'User-Agent': 'Gwitter'
       },
-      body: JSON.stringify({
-        client_id: 'fcf6d95c161162a50048',
-        client_secret: 'c7a4911eb48b24fb92e183fdaad0f833421398da',
-        code
-      })
+      body,
+      mode: 'no-cors'
     })
       .then(console.log)
 
-    this.setState({ code })
   }
 
 
@@ -33,7 +32,6 @@ export default class extends React.Component {
     return (
       <div className="container">
         <h1>Callback</h1>
-        <p>{this.state.code}</p>
       </div>
     )
   }
