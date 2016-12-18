@@ -4,7 +4,9 @@
 
 import React from 'react'
 
-export default () =>
+const SplashPage = () =>
   <div>
     Splash Page
   </div>
+
+export default SplashPage
