@@ -7,7 +7,7 @@ import SplashPage from './pages/SplashPage'
 const App = ({ children }) =>
   <div>
     <Navbar/>
-    <div>{children}</div>
+    {children}
   </div>
 
 ReactDOM.render(
