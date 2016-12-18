@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SplashPage from './SplashPage'
+import SplashPage from './pages/SplashPage'
 
 
 const App = () =>
