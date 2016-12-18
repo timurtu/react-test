@@ -1,12 +1,17 @@
 {
-  "name": "disorat.com",
+  "name": "gwitter",
   "description": "Vote on anything",
-  "repository": "https://git.heroku.com/disorat.git",
+  "repository": "https://git.heroku.com/gwitter.git",
   "logo": "https://cdn3.iconfinder.com/data/icons/shopping-solid-icons-vol-3/64/125-512.png",
   "keywords": [
-    "vote",
-    "on",
-    "anything"
+    "keep",
+    "up",
+    "with",
+    "developers",
+    "social",
+    "network",
+    "git",
+    "github"
   ],
   "image": "heroku/nodejs"
 }
