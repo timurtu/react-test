@@ -80,7 +80,7 @@ export default class extends React.Component {
 
             <form className="navbar-form">
               <a className="btn btn-default"
-                 href={`https://github.com/login/oauth/authorize?scope=user:email&client_id=${this.state.clientID}`}>
+                 href={`https://github.com/login/oauth/authorize?scope=user,email&client_id=${this.state.clientID}`}>
                 Login with GitHub
               </a>
             </form>

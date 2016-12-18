@@ -10,21 +10,23 @@ export default class extends React.Component {
 
   componentWillMount() {
 
+    const code = queryString.parse(location.search).code
+
     const body = new FormData()
-    body.append('code', queryString.parse(location.search).code)
+    body.append('code', code)
     body.append('client_id', 'fcf6d95c161162a50048')
     body.append('client_secret', 'c7a4911eb48b24fb92e183fdaad0f833421398da')
+    body.append('state', Math.floor(Math.random() * Date.now()).toString())
 
-    fetch('https://github.com/login/oauth/access_token', {
+    fetch('https://api.github.com/login/oauth/access_token', {
       method: 'POST',
-      headers: {
-        'User-Agent': 'Gwitter'
-      },
+      headers: new Headers({
+        "Content-Type": "application/json"
+      }),
       body,
       mode: 'no-cors'
     })
       .then(console.log)
-
   }
 
 
@@ -36,3 +38,5 @@ export default class extends React.Component {
     )
   }
 }
+
+
