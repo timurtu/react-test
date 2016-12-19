@@ -74,6 +74,25 @@ const BigButton = ({ children }) =>
     </a>
   </span>
 
+const Centered = ({ children, margin }) =>
+  <div style={{
+    display: 'table',
+    margin: `${margin} auto`
+  }}>
+    {children}
+  </div>
+
+const BigIcon = ({ name }) => <i style={{
+  fontSize: '12em',
+  display: 'table',
+  margin: '6rem auto'
+}} className={`fa fa-${name}`}/>
+
+const LeadText = ({ children }) =>
+  <p style={{ textAlign: 'center' }} className="lead">
+    {children}
+  </p>
+
 const SplashPage = () =>
   <div>
     <Stock>
@@ -83,6 +102,49 @@ const SplashPage = () =>
       <Subhead top="28rem" left="20rem">and share the experience.</Subhead>
       <BigButton>Log in</BigButton>
     </Stock>
+
+    <div className="container">
+      <Centered margin="5rem">
+        <h1>The Social Network for developers</h1>
+      </Centered>
+
+      <div className="row">
+        <div className="col-md-4">
+          <Centered margin="2rem">
+            <h2>Keep in touch</h2>
+          </Centered>
+
+          <BigIcon name="envelope-open-o"/>
+
+          <LeadText>Follow, reply, like, and recommit commits pushed by the developers you follow.</LeadText>
+
+        </div>
+
+        <div className="col-md-4">
+          <Centered margin="2rem">
+            <h3>Write better commit messages</h3>
+
+            <BigIcon name="file-code-o"/>
+
+            <LeadText>
+              You will care more about the quality of your commit messages when you know people are reading them.
+            </LeadText>
+          </Centered>
+        </div>
+
+        <div className="col-md-4">
+          <Centered margin="2rem">
+            <h2>Chat</h2>
+          </Centered>
+
+          <BigIcon name="comments-o"/>
+
+          <LeadText>
+            Communicate with developers who follow you back.
+          </LeadText>
+        </div>
+      </div>
+    </div>
   </div>
 
 export default SplashPage
